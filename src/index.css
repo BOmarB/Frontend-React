@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme transition settings */
+.theme-transition {
+  transition: background-color 0s ease-in-out, color 0s ease-in-out,
+    border-color 0s ease-in-out;
+}
+
+/* Specific theme-sensitive elements */
+.theme-transition .bg-white,
+.theme-transition .bg-gray-50,
+.theme-transition .bg-gray-100,
+.theme-transition .bg-gray-800,
+.theme-transition .bg-gray-900,
+.theme-transition .border,
+.theme-transition .text-white,
+.theme-transition .text-gray-600,
+.theme-transition .text-gray-900,
+.theme-transition [class*="dark:bg-"],
+.theme-transition [class*="dark:text-"],
+.theme-transition [class*="dark:border-"] {
+  transition: background-color 0s ease-in-out, color 0s ease-in-out,
+    border-color 0s ease-in-out;
+}
+
+/* Prevent flash during page load */
+.theme-transition-disabled,
+.theme-transition-disabled * {
+  transition: none !important;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
