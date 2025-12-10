@@ -14,6 +14,11 @@ const FrontPage = () => {
     res();
   }, []);
 
+  useEffect(() => {
+  console.log('API URL:', process.env.REACT_APP_API_URL);
+  console.log('Full test URL:', `${process.env.REACT_APP_API_URL}/test`);
+}, []);
+
   const features = [
     {
       name: "Smart Testing",
