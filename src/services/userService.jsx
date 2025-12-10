@@ -1,10 +1,10 @@
 import axios from "axios";
 // 192.168.0.180
-const API_URL = "http://localhost/onlineexam/backend/api/routes/api.php";
+const API_URL = process.env.REACT_APP_API_URL;
 const api = axios.create({
   baseURL: API_URL,
 });
-
+console.log()
 // Request interceptor for API calls
 api.interceptors.request.use(
   (config) => {
