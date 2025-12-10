@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, Users, Award } from "lucide-react";
 import { useAuth } from "../contexts/authContext";
 import { useTheme } from "../contexts/themeContext";
 import heroImage from "../imgs/ft3.png"; // Import at the top level
+import { test } from "../services/userService";
 
 const FrontPage = () => {
   const { user } = useAuth();
   const { isDarkMode } = useTheme();
-
-  
+  useEffect(() => {
+    const res = async () => await test();
+    res();
+  }, []);
 
   const features = [
     {
@@ -178,7 +181,6 @@ const FrontPage = () => {
                   grading and analysis."
                 </p>
               </blockquote>
-             
             </figure>
           </div>
         </div>

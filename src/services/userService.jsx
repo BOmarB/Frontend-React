@@ -4,7 +4,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const api = axios.create({
   baseURL: API_URL,
 });
-console.log()
+console.log();
 // Request interceptor for API calls
 api.interceptors.request.use(
   (config) => {
@@ -43,7 +43,7 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
+export const test = async () => api.get("test");
 // Auth endpoints
 export const loginUser = async (credentials) => {
   try {
