@@ -1,6 +1,6 @@
 import axios from "axios";
 // 192.168.0.180
-const API_URL = 'https://corsproxy.io/?https://backend-api.wuaze.com';;
+const API_URL = process.env.REACT_APP_API_URL;
 const api = axios.create({
   baseURL: API_URL,
 });
