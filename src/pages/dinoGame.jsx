@@ -428,7 +428,7 @@ const WaitingApproval = () => {
       try {
         setCheckingStatus(true);
         const response = await fetch(
-          "http://localhost/onlineexam/backend/api/routes/api.php/check-status"
+          process.env.REACT_APP_API_URL
         );
         const data = await response.json();
         if (data.status === "Permissioned") navigate("/dashboard");
